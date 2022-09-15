@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Header() {
+function Header({switchTheme, theme}) {
   return (
     <div className='headerContainer'>
       <div className='wrap'>
         <div className='header'>
           <h1>Where in the world?</h1>
-          <p className='modeToggle'>Dark Mode</p>
+          <button onClick={switchTheme} className='modeToggle'>{theme === 'light' ? 'light' : 'dark'} mode</button>
         </div>
       </div>
     </div>
